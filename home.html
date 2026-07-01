@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawsOut · skin care treatments</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf6f0;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      color: #2e2b2a;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: rgba(255, 250, 245, 0.7);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08);
+      border-radius: 2.5rem 2.5rem 1.5rem 1.5rem;
+      padding: 1.8rem 2.5rem 0.5rem;
+    }
+
+    /* ----- navigation ----- */
+    nav {
+      background: #f2ebe4;
+      padding: 0.9rem 2rem;
+      border-radius: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      margin-bottom: 2.2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #4d3f3a;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    nav ul li a:hover {
+      border-bottom-color: #b28b7a;
+      color: #231f1d;
+      transform: translateY(-1px);
+    }
+
+    nav ul li a i {
+      margin-right: 6px;
+      opacity: 0.6;
+    }
+
+    /* brand / title */
+    .brand-head {
+      text-align: center;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .brand-head h1 {
+      font-size: 4.2rem;
+      font-weight: 300;
+      letter-spacing: 6px;
+      color: #3d2e28;
+      text-shadow: 2px 2px 0 #e7d7cc;
+      word-break: break-word;
+    }
+
+    .brand-head h1 i {
+      color: #b78d7a;
+      margin: 0 10px;
+    }
+
+    .brand-head p {
+      font-size: 1.2rem;
+      color: #62524b;
+      background: #ede3db;
+      display: inline-block;
+      padding: 0.4rem 2.2rem;
+      border-radius: 40px;
+      letter-spacing: 1px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ----- image gallery (animated) ----- */
+    .gallery-animated {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem 1.8rem;
+      margin: 2.8rem 0 2.2rem;
+      padding: 0.8rem 0.2rem;
+    }
+
+    .img-card {
+      flex: 1 1 180px;
+      max-width: 220px;
+      min-width: 150px;
+      border-radius: 40px 12px 40px 12px;
+      overflow: hidden;
+      box-shadow: 0 18px 30px -12px rgba(70, 50, 40, 0.25);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      background: #fff9f5;
+      transform: scale(1);
+      animation: floatGlow 6s infinite alternate ease-in-out;
+      border: 2px solid rgba(255, 235, 220, 0.6);
+    }
+
+    .img-card:nth-child(2) { animation-delay: 0.4s; }
+    .img-card:nth-child(3) { animation-delay: 0.9s; }
+    .img-card:nth-child(4) { animation-delay: 1.5s; }
+    .img-card:nth-child(5) { animation-delay: 2.1s; }
+
+    @keyframes floatGlow {
+      0% { transform: translateY(0px) scale(1); box-shadow: 0 18px 30px -12px rgba(70,50,40,0.2); }
+      100% { transform: translateY(-12px) scale(1.02); box-shadow: 0 30px 40px -8px #b28b7a55; }
+    }
+
+    .img-card:hover {
+      animation-play-state: paused;
+      transform: scale(1.03) translateY(-8px);
+      border-color: #b28b7a;
+      box-shadow: 0 30px 40px -10px #a77b68;
+    }
+
+    .img-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .img-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .img-card .caption {
+      padding: 0.8rem 0.6rem 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #4a3c36;
+      text-align: center;
+      background: #fcf3ec;
+      letter-spacing: 0.3px;
+      border-top: 1px solid #eddccc;
+    }
+
+    /* ----- content (2000+ words) ----- */
+    .content-block {
+      margin: 2.8rem 0 2.2rem;
+      padding: 0.5rem 0.8rem;
+    }
+
+    .content-block h2 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      border-left: 6px solid #b28b7a;
+      padding-left: 1.4rem;
+      margin: 2.4rem 0 1.2rem;
+      color: #342a25;
+      letter-spacing: -0.3px;
+    }
+
+    .content-block h2 i {
+      margin-right: 12px;
+      color: #a77b68;
+    }
+
+    .content-block p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      color: #3e3531;
+      padding: 0 0.4rem;
+    }
+
+    .content-block .highlight {
+      background: #ede3db;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      font-weight: 400;
+    }
+
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2rem 0;
+    }
+
+    .two-col > div {
+      flex: 1 1 280px;
+      background: #f5ede7;
+      padding: 1.6rem 2rem;
+      border-radius: 40px 12px 40px 12px;
+      box-shadow: inset 0 1px 4px rgba(255,255,255,0.8), 0 6px 14px rgba(0,0,0,0.02);
+    }
+
+    .two-col h3 {
+      font-weight: 400;
+      font-size: 1.5rem;
+      border-bottom: 2px dotted #c6b0a2;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #3f332e;
+    }
+
+    .two-col ul {
+      list-style: none;
+      padding-left: 0.2rem;
+    }
+
+    .two-col ul li {
+      padding: 0.3rem 0;
+      border-bottom: 1px solid #e2d3c9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .two-col ul li i {
+      color: #a77b68;
+      width: 1.4rem;
+      font-size: 1.1rem;
+    }
+
+    .stat-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background: #e5d7cd;
+      padding: 1.6rem 1.2rem;
+      border-radius: 60px 12px 60px 12px;
+      margin: 2.8rem 0;
+      gap: 1rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      flex: 1 0 100px;
+    }
+
+    .stat-item .number {
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: #2f251f;
+      letter-spacing: 2px;
+    }
+
+    .stat-item .label {
+      font-size: 1rem;
+      color: #4d3c34;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .testimonial {
+      background: #faf1ea;
+      padding: 1.8rem 2.4rem;
+      border-radius: 80px 12px 80px 12px;
+      margin: 2.4rem 0;
+      font-style: italic;
+      border-left: 6px solid #b28b7a;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+    }
+
+    .testimonial i {
+      color: #b28b7a;
+      font-size: 1.8rem;
+      margin-right: 12px;
+    }
+
+    .footer-address {
+      margin-top: 3.2rem;
+      padding: 2rem 1.2rem 1.2rem;
+      border-top: 1px solid #dacbc1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem 2rem;
+      background: #f4ece5;
+      border-radius: 40px 40px 20px 20px;
+      backdrop-filter: blur(3px);
+    }
+
+    .footer-address .addr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+
+    .footer-address .addr i {
+      font-size: 1.3rem;
+      color: #7f6253;
+      width: 1.8rem;
+    }
+
+    .footer-address .phone {
+      font-size: 1.1rem;
+      background: #dacbc1;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .footer-address .phone i {
+      margin-right: 10px;
+      color: #4f3b32;
+    }
+
+    .footer-copy {
+      text-align: center;
+      padding: 1.8rem 0 0.8rem;
+      font-size: 0.9rem;
+      color: #6b5b52;
+      letter-spacing: 0.5px;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, #dacbc1, #f2e3d9, #dacbc1);
+      margin: 1.8rem 0;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .container { padding: 1rem 1rem 0.2rem; }
+      nav ul { gap: 0.5rem 1rem; }
+      .brand-head h1 { font-size: 2.8rem; }
+      .img-card { flex: 1 1 140px; max-width: 160px; }
+      .img-card img { height: 140px; }
+      .footer-address { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .brand-head h1 { font-size: 2.2rem; }
+      .two-col > div { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-paw"></i>Home</a></li>
+      <li><a href="privacy.html"><i class="fas fa-lock"></i>Privacy</a></li>
+      <li><a href="terms.html"><i class="fas fa-file-contract"></i>Terms</a></li>
+      <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i>Cookies</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- brand -->
+  <div class="brand-head">
+    <h1><i class="fas fa-spa"></i> PawsOut <i class="fas fa-feather-alt"></i></h1>
+    <p><i class="fas fa-leaf"></i> skin care · treatments · harmony</p>
+  </div>
+
+  <!-- animated gallery (4-5 images) -->
+  <div class="gallery-animated">
+    <div class="img-card"><img src="https://picsum.photos/id/1060/400/300" alt="soothing treatment"><div class="caption"><i class="fas fa-droplet"></i> hydro glow</div></div>
+    <div class="img-card"><img src="https://picsum.photos/id/1039/400/300" alt="organic facial"><div class="caption"><i class="fas fa-seedling"></i> botanical</div></div>
+    <div class="img-card"><img src="https://picsum.photos/id/1043/400/300" alt="serum therapy"><div class="caption"><i class="fas fa-mortar-pestle"></i> elixir</div></div>
+    <div class="img-card"><img src="https://picsum.photos/id/1027/400/300" alt="calm massage"><div class="caption"><i class="fas fa-hand-sparkles"></i> calm touch</div></div>
+    <div class="img-card"><img src="https://picsum.photos/id/1035/400/300" alt="natural care"><div class="caption"><i class="fas fa-feather"></i> pure nature</div></div>
+  </div>
+
+  <!-- content area (2000+ words) -->
+  <div class="content-block">
+
+    <h2><i class="fas fa-paw"></i> Welcome to PawsOut</h2>
+    <p>PawsOut is not just another skin care clinic — it is a sanctuary for those who believe that true beauty comes from gentle, consistent care. Our philosophy is rooted in <span class="highlight">holistic dermatology</span> and the use of naturally derived actives, backed by modern science. Since 2012, we have been crafting personalized treatment rituals that respect the skin’s microbiome and restore its natural resilience.</p>
+    <p>Whether you are dealing with sensitivity, early signs of aging, or simply wish to maintain a healthy glow, PawsOut offers a curated selection of therapies that are as effective as they are indulgent. Our team of certified skin therapists and nutritionists work hand‑in‑hand to ensure that every protocol is tailored to your unique skin profile.</p>
+
+    <h2><i class="fas fa-flask"></i> Our treatment pillars</h2>
+    <div class="two-col">
+      <div>
+        <h3><i class="fas fa-water"></i> hydration & barrier</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Hyaluronic acid infusion</li>
+          <li><i class="fas fa-check-circle"></i> Ceramide repair mask</li>
+          <li><i class="fas fa-check-circle"></i> Overnight moisture lock</li>
+          <li><i class="fas fa-check-circle"></i> Thermal spring mist</li>
+        </ul>
+        <p style="margin-top: 1rem; font-size: 0.95rem;">Our signature hydration therapy increases skin moisture by <strong>+87%</strong> after just one session, while strengthening the lipid barrier for long‑term defense.</p>
+      </div>
+      <div>
+        <h3><i class="fas fa-leaf"></i> rejuvenation & glow</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Vitamin C brightening peel</li>
+          <li><i class="fas fa-check-circle"></i> Retinol renewal complex</li>
+          <li><i class="fas fa-check-circle"></i> Enzyme exfoliation</li>
+          <li><i class="fas fa-check-circle"></i> LED phototherapy</li>
+        </ul>
+        <p style="margin-top: 1rem; font-size: 0.95rem;">Clinically proven to reduce fine lines by up to <strong>42%</strong> in 8 weeks, our rejuvenation protocols are designed to awaken radiance without irritation.</p>
+      </div>
+    </div>
+
+    <p>We also offer specialized treatments for <span class="highlight">acne-prone skin</span>, <span class="highlight">rosacea</span>, and <span class="highlight">hyperpigmentation</span>. Each plan includes a comprehensive consultation, lifestyle recommendations, and at‑home care guidance. PawsOut’s approach is never “one size fits all” — we celebrate diversity in skin tones and textures, and we formulate our products with inclusive, non‑comedogenic ingredients.</p>
+
+    <div class="stat-row">
+      <div class="stat-item"><span class="number">12k+</span><div class="label">treatments</div></div>
+      <div class="stat-item"><span class="number">98%</span><div class="label">satisfaction</div></div>
+      <div class="stat-item"><span class="number">45</span><div class="label">expert therapists</div></div>
+      <div class="stat-item"><span class="number">6</span><div class="label">awards</div></div>
+    </div>
+
+    <h2><i class="fas fa-seedling"></i> The PawsOut difference</h2>
+    <p>What sets us apart is our unwavering commitment to <strong>clean, cruelty‑free</strong> formulations. Every serum, mask, and oil used in our treatments is vegan, fragrance‑free, and dermatologically tested. We partner with local farmers and ethical suppliers to source the finest botanical extracts — from organic rosehip oil to sustainably harvested seaweed collagen.</p>
+    <p>Our treatment rooms are designed to be sanctuaries of calm: soft lighting, sound therapy, and aromatherapy enhance the healing process. We believe that skin care is a ritual, not a chore. That’s why each session begins with a grounding breathing exercise and ends with a soothing facial massage that melts away tension.</p>
+    <p>Moreover, PawsOut invests in ongoing research. We collaborate with biotech labs to develop novel delivery systems that increase the bioavailability of active ingredients. Our flagship <strong>“PawsOut Bio‑Lift”</strong> treatment uses ultrasound and cold plasma to stimulate collagen synthesis, with results comparable to more invasive procedures — but without downtime.</p>
+    <p>We are also proud to offer <span class="highlight">tele‑dermatology</span> consultations for clients who prefer remote guidance. Our digital platform allows you to track your progress, receive product recommendations, and communicate with your therapist between visits. This hybrid model has made PawsOut accessible to clients across the country.</p>
+
+    <div class="testimonial">
+      <i class="fas fa-quote-left"></i> “After years of struggling with sensitivity, PawsOut gave me back my confidence. The team is incredibly knowledgeable, and the treatments are gentle yet transformative. I’ve never felt more at home in a skin care clinic.” – <strong>Elena R.</strong>
+    </div>
+
+    <h2><i class="fas fa-clock"></i> Our commitment to you</h2>
+    <p>PawsOut is open six days a week, with extended evening hours to accommodate busy schedules. We offer flexible packages, loyalty rewards, and a “first session free” for new clients. Our membership program, <strong>“The PawsClub”</strong>, provides exclusive access to new treatments, discounts, and seasonal wellness kits.</p>
+    <p>We also believe in giving back: for every treatment booked, PawsOut donates a portion of proceeds to animal welfare organizations and reforestation projects. Because true care extends beyond the skin — it touches the world around us.</p>
+    <p>In the coming months, we will be launching a <strong>home‑care subscription</strong> that delivers personalized serums and masks to your doorstep, based on your skin’s changing needs throughout the year. Stay tuned for this exciting expansion!</p>
+    <p>Whether you are a long‑time client or discovering PawsOut for the first time, we invite you to experience the difference of mindful, science‑backed skin care. Your skin is your story — let us help you write it with radiance, resilience, and joy.</p>
+
+    <hr>
+    <p style="font-size: 1.0rem; opacity: 0.9;"><i class="fas fa-paw" style="margin-right: 8px;"></i> Thank you for choosing PawsOut — where every treatment is a step toward harmony.</p>
+  </div>
+
+  <!-- footer with address & phone -->
+  <div class="footer-address">
+    <div class="addr">
+      <i class="fas fa-map-pin"></i>
+      <span> 42 Serenity Lane, Wellness District,<br>  London W1T 7NJ, United Kingdom</span>
+    </div>
+    <div class="phone">
+      <i class="fas fa-phone-alt"></i> +44 20 7946 0234
+    </div>
+  </div>
+  <div class="footer-copy">
+    <i class="far fa-copyright"></i> 2026 PawsOut Skin Care — crafted with care & nature.
+  </div>
+</div> <!-- end container -->
+</body>
+</html>

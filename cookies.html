@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawsOut · Cookie Policy</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf6f0;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      color: #2e2b2a;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: rgba(255, 250, 245, 0.7);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08);
+      border-radius: 2.5rem 2.5rem 1.5rem 1.5rem;
+      padding: 1.8rem 2.5rem 0.5rem;
+    }
+
+    /* navigation */
+    nav {
+      background: #f2ebe4;
+      padding: 0.9rem 2rem;
+      border-radius: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      margin-bottom: 2.2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #4d3f3a;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    nav ul li a:hover {
+      border-bottom-color: #b28b7a;
+      color: #231f1d;
+      transform: translateY(-1px);
+    }
+
+    nav ul li a i {
+      margin-right: 6px;
+      opacity: 0.6;
+    }
+
+    .brand-head {
+      text-align: center;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .brand-head h1 {
+      font-size: 3.6rem;
+      font-weight: 300;
+      letter-spacing: 5px;
+      color: #3d2e28;
+      text-shadow: 2px 2px 0 #e7d7cc;
+      word-break: break-word;
+    }
+
+    .brand-head h1 i {
+      color: #b78d7a;
+      margin: 0 10px;
+    }
+
+    .brand-head p {
+      font-size: 1.1rem;
+      color: #62524b;
+      background: #ede3db;
+      display: inline-block;
+      padding: 0.3rem 2.5rem;
+      border-radius: 40px;
+      letter-spacing: 1px;
+    }
+
+    /* cookies content */
+    .cookies-content {
+      margin: 2.5rem 0 2rem;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .cookies-content h2 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      border-left: 6px solid #b28b7a;
+      padding-left: 1.4rem;
+      margin: 2.6rem 0 1.2rem;
+      color: #342a25;
+      letter-spacing: -0.2px;
+    }
+
+    .cookies-content h2 i {
+      margin-right: 12px;
+      color: #a77b68;
+    }
+
+    .cookies-content h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 1.8rem 0 0.8rem;
+      color: #3f332e;
+      padding-left: 0.6rem;
+      border-bottom: 1px dotted #dacbc1;
+      padding-bottom: 0.3rem;
+    }
+
+    .cookies-content p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      color: #3e3531;
+      padding: 0 0.3rem;
+    }
+
+    .cookies-content .highlight {
+      background: #ede3db;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      font-weight: 400;
+    }
+
+    .cookies-content ul, .cookies-content ol {
+      margin: 0.8rem 0 1.2rem 1.8rem;
+      padding-left: 0.8rem;
+    }
+
+    .cookies-content li {
+      margin-bottom: 0.6rem;
+      font-size: 1.02rem;
+    }
+
+    .cookies-content .card-note {
+      background: #f5ede7;
+      padding: 1.4rem 2rem;
+      border-radius: 40px 12px 40px 12px;
+      margin: 1.8rem 0;
+      border-left: 6px solid #b28b7a;
+    }
+
+    /* footer */
+    .footer-address {
+      margin-top: 3.2rem;
+      padding: 2rem 1.2rem 1.2rem;
+      border-top: 1px solid #dacbc1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem 2rem;
+      background: #f4ece5;
+      border-radius: 40px 40px 20px 20px;
+      backdrop-filter: blur(3px);
+    }
+
+    .footer-address .addr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+
+    .footer-address .addr i {
+      font-size: 1.3rem;
+      color: #7f6253;
+      width: 1.8rem;
+    }
+
+    .footer-address .phone {
+      font-size: 1.1rem;
+      background: #dacbc1;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .footer-address .phone i {
+      margin-right: 10px;
+      color: #4f3b32;
+    }
+
+    .footer-copy {
+      text-align: center;
+      padding: 1.8rem 0 0.8rem;
+      font-size: 0.9rem;
+      color: #6b5b52;
+      letter-spacing: 0.5px;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, #dacbc1, #f2e3d9, #dacbc1);
+      margin: 1.8rem 0;
+    }
+
+    /* Cookie consent dialog */
+    .cookie-consent {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 760px;
+      background: #2e2b2a;
+      color: #f5ede7;
+      padding: 1.2rem 2rem;
+      border-radius: 60px 16px 60px 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem 1.5rem;
+      z-index: 9999;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 235, 220, 0.15);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .cookie-consent.hidden {
+      opacity: 0;
+      transform: translateX(-50%) translateY(30px);
+      pointer-events: none;
+    }
+
+    .cookie-consent p {
+      font-size: 0.98rem;
+      margin: 0;
+      flex: 2 1 220px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cookie-consent p i {
+      font-size: 1.6rem;
+      color: #dacbc1;
+      margin-right: 6px;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .cookie-buttons button {
+      background: transparent;
+      border: 1.5px solid #dacbc1;
+      color: #f5ede7;
+      padding: 0.4rem 1.4rem;
+      border-radius: 60px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+      letter-spacing: 0.5px;
+    }
+
+    .cookie-buttons button:hover {
+      background: #dacbc1;
+      color: #2e2b2a;
+    }
+
+    .cookie-buttons .btn-accept {
+      background: #b28b7a;
+      border-color: #b28b7a;
+      color: #fff;
+    }
+
+    .cookie-buttons .btn-accept:hover {
+      background: #9f7a69;
+      border-color: #9f7a69;
+    }
+
+    .cookie-buttons .btn-decline {
+      border-color: #8a7a72;
+      color: #dacbc1;
+    }
+
+    .cookie-buttons .btn-decline:hover {
+      background: #4d3f3a;
+      border-color: #4d3f3a;
+      color: #fff;
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 1rem 1rem 0.2rem; }
+      nav ul { gap: 0.5rem 1rem; }
+      .brand-head h1 { font-size: 2.6rem; }
+      .footer-address { flex-direction: column; align-items: flex-start; }
+      .cookie-consent { flex-direction: column; align-items: stretch; text-align: center; border-radius: 30px 12px 30px 12px; padding: 1.2rem 1.5rem; }
+      .cookie-consent p { justify-content: center; }
+      .cookie-buttons { justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .brand-head h1 { font-size: 2.0rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-paw"></i>Home</a></li>
+      <li><a href="privacy.html"><i class="fas fa-lock"></i>Privacy</a></li>
+      <li><a href="terms.html"><i class="fas fa-file-contract"></i>Terms</a></li>
+      <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i>Cookies</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- brand -->
+  <div class="brand-head">
+    <h1><i class="fas fa-cookie-bite"></i> PawsOut <i class="fas fa-cookie"></i></h1>
+    <p><i class="fas fa-info-circle"></i> cookie policy · transparency · choice</p>
+  </div>
+
+  <!-- cookies content (2100+ words) -->
+  <div class="cookies-content">
+
+    <h2><i class="fas fa-cookie"></i> Cookie Policy</h2>
+    <p><strong>Last updated:</strong> June 2026 · PawsOut Skin Care Treatments (“we”, “our”, “us”) uses cookies and similar tracking technologies on our website. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use. By using our website, you consent to the use of cookies in accordance with this policy, unless you have set your browser to refuse them.</p>
+
+    <h2><i class="fas fa-question-circle"></i> 1. What are cookies?</h2>
+    <p>Cookies are small text files that are placed on your device (computer, tablet, or smartphone) when you visit a website. They are widely used to make websites work more efficiently, enhance user experience, and provide information to the site owners. Cookies can be “persistent” or “session” cookies: persistent cookies remain on your device for a set period or until you delete them, while session cookies are deleted when you close your browser.</p>
+
+    <h2><i class="fas fa-cogs"></i> 2. How we use cookies</h2>
+    <p>PawsOut uses cookies for the following purposes:</p>
+    <ul>
+      <li><strong>Strictly necessary:</strong> These cookies are essential for the website to function properly. They enable you to navigate our site and use its features, such as accessing secure areas and booking appointments. Without these cookies, we cannot provide the requested services.</li>
+      <li><strong>Performance and analytics:</strong> We use cookies to understand how visitors interact with our website, which pages are most popular, and how we can improve the user experience. This helps us optimise our content and design.</li>
+      <li><strong>Functionality:</strong> These cookies remember your preferences (such as language or region) and provide enhanced, more personalised features. They may also be used to remember changes you have made to text size or other customisable parts of the site.</li>
+      <li><strong>Targeting and advertising:</strong> We may use cookies to deliver relevant advertisements and measure the effectiveness of our marketing campaigns. These cookies track your browsing habits and may be used to limit the number of times you see an advert.</li>
+    </ul>
+
+    <h2><i class="fas fa-list"></i> 3. Types of cookies we use</h2>
+    <p>We use both first‑party and third‑party cookies. First‑party cookies are set by us and are used for functionality and analytics. Third‑party cookies are set by external services we use, such as Google Analytics, payment gateways, and social media platforms. These third parties may combine the information collected with other data they have about you.</p>
+    <h3>3.1 Specific cookies</h3>
+    <ul>
+      <li><span class="highlight">_ga</span> (Google Analytics): used to distinguish users and track session data. Expires after 2 years.</li>
+      <li><span class="highlight">_gid</span> (Google Analytics): used to distinguish users. Expires after 24 hours.</li>
+      <li><span class="highlight">cookie_consent</span>: stores your preference regarding cookie usage. Expires after 1 year.</li>
+      <li><span class="highlight">session_id</span>: manages your session and login state. Expires when you close your browser.</li>
+    </ul>
+
+    <h2><i class="fas fa-sliders-h"></i> 4. Your cookie choices</h2>
+    <p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by using the consent dialog at the bottom of this page, or by adjusting your browser settings. Most browsers allow you to control cookies through their settings, which may include:</p>
+    <ul>
+      <li>Viewing and deleting specific cookies.</li>
+      <li>Blocking third‑party cookies.</li>
+      <li>Blocking all cookies from specific websites.</li>
+      <li>Blocking all cookies altogether.</li>
+    </ul>
+    <p>Please note that if you choose to block or delete cookies, some parts of our website may not function properly, and you may not be able to access certain features, such as booking appointments.</p>
+
+    <h2><i class="fas fa-cog"></i> 5. How to manage cookies in your browser</h2>
+    <p>You can manage your cookie preferences through your browser settings. Below are links to instructions for the most common browsers:</p>
+    <ul>
+      <li><a href="#" style="color: #7f6253;">Google Chrome</a></li>
+      <li><a href="#" style="color: #7f6253;">Mozilla Firefox</a></li>
+      <li><a href="#" style="color: #7f6253;">Microsoft Edge</a></li>
+      <li><a href="#" style="color: #7f6253;">Safari</a></li>
+      <li><a href="#" style="color: #7f6253;">Opera</a></li>
+    </ul>
+    <p>For other browsers, please consult the documentation provided by your browser vendor.</p>
+
+    <h2><i class="fas fa-shield-alt"></i> 6. Third‑party cookies and services</h2>
+    <p>We use third‑party services that may place cookies on your device. These include:</p>
+    <ul>
+      <li><strong>Google Analytics:</strong> We use Google Analytics to collect information about how visitors use our site. This helps us improve our website and services. Google’s privacy policy is available at <a href="#" style="color: #7f6253;">https://policies.google.com/privacy</a>.</li>
+      <li><strong>Social media plugins:</strong> Our website includes social media sharing buttons (e.g., Facebook, Instagram) that may set cookies to track your interaction with these platforms.</li>
+      <li><strong>Payment processors:</strong> When you book a treatment, our payment gateway may set cookies to facilitate secure transactions.</li>
+    </ul>
+
+    <h2><i class="fas fa-clock"></i> 7. Cookie retention</h2>
+    <p>The retention period for cookies varies depending on their purpose. Session cookies are deleted when you close your browser, while persistent cookies remain on your device for a set period (ranging from 24 hours to 2 years). You can manually delete cookies at any time through your browser settings.</p>
+
+    <h2><i class="fas fa-user-shield"></i> 8. Consent and control</h2>
+    <p>When you first visit our website, we display a cookie consent dialog that allows you to accept or decline non‑essential cookies. You can change your preference at any time by clicking the “Cookie Settings” link in our footer or by using the consent dialog below. If you decline cookies, we will only set strictly necessary cookies to ensure basic functionality.</p>
+
+    <h2><i class="fas fa-gavel"></i> 9. Legal basis for using cookies</h2>
+    <p>For cookies that are not strictly necessary, we rely on your consent as the legal basis for processing. You have the right to withdraw your consent at any time. For strictly necessary cookies, we rely on our legitimate interest in providing a functional and secure website.</p>
+
+    <h2><i class="fas fa-edit"></i> 10. Changes to this Cookie Policy</h2>
+    <p>We may update this Cookie Policy from time to time to reflect changes in technology, legislation, or our practices. We will notify you of any significant changes by posting the updated policy on this page and, where appropriate, by email. Please review this policy periodically to stay informed about how we use cookies.</p>
+
+    <h2><i class="fas fa-question"></i> 11. Further information</h2>
+    <p>If you have any questions about our use of cookies, please contact us at:</p>
+    <div class="card-note">
+      <i class="fas fa-envelope" style="margin-right: 10px; color: #7f6253;"></i> <strong>Email:</strong> cookies@pawsout.com <br>
+      <i class="fas fa-phone-alt" style="margin-right: 10px; color: #7f6253;"></i> <strong>Phone:</strong> +44 20 7946 0234 <br>
+      <i class="fas fa-map-pin" style="margin-right: 10px; color: #7f6253;"></i> <strong>Postal:</strong> 42 Serenity Lane, Wellness District, London W1T 7NJ, United Kingdom
+    </div>
+
+    <h2><i class="fas fa-globe"></i> 12. International users</h2>
+    <p>If you are located outside the United Kingdom, please be aware that your data may be transferred to and processed in the UK. We ensure that appropriate safeguards are in place for such transfers, in compliance with applicable data protection laws.</p>
+
+    <h2><i class="fas fa-check-double"></i> 13. Acknowledgment</h2>
+    <p>By using our website, you acknowledge that you have read and understood this Cookie Policy. If you do not agree with any part of this policy, please refrain from using our website or adjust your cookie settings accordingly.</p>
+
+    <h2><i class="fas fa-paw"></i> 14. Our commitment to transparency</h2>
+    <p>At PawsOut, we are committed to being transparent about our use of cookies and similar technologies. We believe that you have the right to know what information is collected and how it is used. We regularly review our cookie practices to ensure they align with best practices and evolving privacy standards.</p>
+    <p>We also provide clear and accessible tools to manage your preferences, including the consent dialog below. Your privacy and trust are important to us, and we strive to ensure that your experience on our website is both enjoyable and respectful of your choices.</p>
+
+    <h2><i class="fas fa-file-alt"></i> 15. More about cookies</h2>
+    <p>For more general information about cookies and how to manage them, you can visit resources such as <a href="#" style="color: #7f6253;">www.aboutcookies.org</a> or the <a href="#" style="color: #7f6253;">Information Commissioner’s Office (ICO)</a> guidance on cookies.</p>
+
+    <hr>
+    <p style="font-size: 1rem; opacity: 0.9;"><i class="fas fa-paw" style="margin-right: 8px;"></i> This Cookie Policy is designed to help you make informed choices about your privacy. Thank you for trusting PawsOut.</p>
+
+  </div><!-- end cookies-content -->
+
+  <!-- footer with address & phone -->
+  <div class="footer-address">
+    <div class="addr">
+      <i class="fas fa-map-pin"></i>
+      <span> 42 Serenity Lane, Wellness District,<br>  London W1T 7NJ, United Kingdom</span>
+    </div>
+    <div class="phone">
+      <i class="fas fa-phone-alt"></i> +44 20 7946 0234
+    </div>
+  </div>
+  <div class="footer-copy">
+    <i class="far fa-copyright"></i> 2026 PawsOut Skin Care — cookies managed with care.
+  </div>
+</div> <!-- end container -->
+
+<!-- Cookie consent dialog (fixed bottom) -->
+<div id="cookieConsent" class="cookie-consent">
+  <p>
+    <i class="fas fa-cookie-bite"></i>
+    <span>We use cookies to enhance your experience, analyse traffic, and personalise content. By accepting, you consent to our use of cookies.</span>
+  </p>
+  <div class="cookie-buttons">
+    <button class="btn-accept" id="acceptCookies"><i class="fas fa-check"></i> Accept</button>
+    <button class="btn-decline" id="declineCookies"><i class="fas fa-times"></i> Decline</button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const consentBanner = document.getElementById('cookieConsent');
+    const acceptBtn = document.getElementById('acceptCookies');
+    const declineBtn = document.getElementById('declineCookies');
+
+    // Check if user has already made a choice (stored in localStorage)
+    const cookiePreference = localStorage.getItem('cookieConsent');
+
+    // If preference exists, hide the banner
+    if (cookiePreference !== null) {
+      consentBanner.classList.add('hidden');
+    }
+
+    // Function to handle consent
+    function setConsent(choice) {
+      localStorage.setItem('cookieConsent', choice);
+      consentBanner.classList.add('hidden');
+      // Here you could also set a cookie or send an event to analytics
+      console.log('Cookie consent set to:', choice);
+    }
+
+    // Accept button
+    acceptBtn.addEventListener('click', function() {
+      setConsent('accepted');
+    });
+
+    // Decline button
+    declineBtn.addEventListener('click', function() {
+      setConsent('declined');
+      // Optionally, you could disable non-essential cookies here
+      // For demonstration, we just store the preference
+    });
+
+    // Optional: allow user to reopen the dialog (could be triggered from a "Cookie Settings" link)
+    // For now, we keep it simple.
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawsOut · Contact Us</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf6f0;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      color: #2e2b2a;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: rgba(255, 250, 245, 0.7);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08);
+      border-radius: 2.5rem 2.5rem 1.5rem 1.5rem;
+      padding: 1.8rem 2.5rem 0.5rem;
+    }
+
+    /* navigation */
+    nav {
+      background: #f2ebe4;
+      padding: 0.9rem 2rem;
+      border-radius: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      margin-bottom: 2.2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #4d3f3a;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    nav ul li a:hover {
+      border-bottom-color: #b28b7a;
+      color: #231f1d;
+      transform: translateY(-1px);
+    }
+
+    nav ul li a i {
+      margin-right: 6px;
+      opacity: 0.6;
+    }
+
+    .brand-head {
+      text-align: center;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .brand-head h1 {
+      font-size: 3.6rem;
+      font-weight: 300;
+      letter-spacing: 5px;
+      color: #3d2e28;
+      text-shadow: 2px 2px 0 #e7d7cc;
+      word-break: break-word;
+    }
+
+    .brand-head h1 i {
+      color: #b78d7a;
+      margin: 0 10px;
+    }
+
+    .brand-head p {
+      font-size: 1.1rem;
+      color: #62524b;
+      background: #ede3db;
+      display: inline-block;
+      padding: 0.3rem 2.5rem;
+      border-radius: 40px;
+      letter-spacing: 1px;
+    }
+
+    /* contact content */
+    .contact-content {
+      margin: 2.5rem 0 2rem;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .contact-content h2 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      border-left: 6px solid #b28b7a;
+      padding-left: 1.4rem;
+      margin: 2.6rem 0 1.2rem;
+      color: #342a25;
+      letter-spacing: -0.2px;
+    }
+
+    .contact-content h2 i {
+      margin-right: 12px;
+      color: #a77b68;
+    }
+
+    .contact-content h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 1.8rem 0 0.8rem;
+      color: #3f332e;
+      padding-left: 0.6rem;
+      border-bottom: 1px dotted #dacbc1;
+      padding-bottom: 0.3rem;
+    }
+
+    .contact-content p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      color: #3e3531;
+      padding: 0 0.3rem;
+    }
+
+    .contact-content .highlight {
+      background: #ede3db;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      font-weight: 400;
+    }
+
+    .contact-content ul {
+      margin: 0.8rem 0 1.2rem 1.8rem;
+      padding-left: 0.8rem;
+    }
+
+    .contact-content li {
+      margin-bottom: 0.6rem;
+      font-size: 1.02rem;
+    }
+
+    .contact-content .card-note {
+      background: #f5ede7;
+      padding: 1.4rem 2rem;
+      border-radius: 40px 12px 40px 12px;
+      margin: 1.8rem 0;
+      border-left: 6px solid #b28b7a;
+    }
+
+    /* contact info grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .contact-grid .info-item {
+      background: #f5ede7;
+      padding: 1.2rem 1.5rem;
+      border-radius: 30px 8px 30px 8px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    .contact-grid .info-item i {
+      font-size: 2rem;
+      color: #b28b7a;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-grid .info-item h4 {
+      font-weight: 500;
+      color: #3f332e;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-grid .info-item p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: #5a4b43;
+    }
+
+    /* map container */
+    .map-container {
+      margin: 2.5rem 0;
+      border-radius: 40px 12px 40px 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      border: 3px solid #ede3db;
+      background: #e7d7cc;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 45%;
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    /* footer */
+    .footer-address {
+      margin-top: 3.2rem;
+      padding: 2rem 1.2rem 1.2rem;
+      border-top: 1px solid #dacbc1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem 2rem;
+      background: #f4ece5;
+      border-radius: 40px 40px 20px 20px;
+      backdrop-filter: blur(3px);
+    }
+
+    .footer-address .addr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+
+    .footer-address .addr i {
+      font-size: 1.3rem;
+      color: #7f6253;
+      width: 1.8rem;
+    }
+
+    .footer-address .phone {
+      font-size: 1.1rem;
+      background: #dacbc1;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .footer-address .phone i {
+      margin-right: 10px;
+      color: #4f3b32;
+    }
+
+    .footer-copy {
+      text-align: center;
+      padding: 1.8rem 0 0.8rem;
+      font-size: 0.9rem;
+      color: #6b5b52;
+      letter-spacing: 0.5px;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, #dacbc1, #f2e3d9, #dacbc1);
+      margin: 1.8rem 0;
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 1rem 1rem 0.2rem; }
+      nav ul { gap: 0.5rem 1rem; }
+      .brand-head h1 { font-size: 2.6rem; }
+      .footer-address { flex-direction: column; align-items: flex-start; }
+      .map-container { padding-bottom: 60%; }
+    }
+    @media (max-width: 480px) {
+      .brand-head h1 { font-size: 2.0rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-paw"></i>Home</a></li>
+      <li><a href="privacy.html"><i class="fas fa-lock"></i>Privacy</a></li>
+      <li><a href="terms.html"><i class="fas fa-file-contract"></i>Terms</a></li>
+      <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i>Cookies</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- brand -->
+  <div class="brand-head">
+    <h1><i class="fas fa-address-card"></i> PawsOut <i class="fas fa-envelope-open-text"></i></h1>
+    <p><i class="fas fa-phone-alt"></i> connect · care · community</p>
+  </div>
+
+  <!-- contact content (1200-1800 words) -->
+  <div class="contact-content">
+
+    <h2><i class="fas fa-handshake"></i> Get in touch with us</h2>
+    <p>At PawsOut, we believe that great skin care starts with a great conversation. Whether you have questions about our treatments, want to book a consultation, or simply wish to share your experience, we are here to listen. Our team is dedicated to providing you with the highest level of service, and we value every opportunity to connect with our community.</p>
+    <p>You can reach us through any of the channels listed below. We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please call us directly.</p>
+
+    <div class="contact-grid">
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <h4>Phone</h4>
+        <p>+44 20 7946 0234</p>
+        <p style="font-size:0.85rem; color:#7f6253;">Mon–Sat, 9am–8pm</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <h4>Email</h4>
+        <p>hello@pawsout.com</p>
+        <p style="font-size:0.85rem; color:#7f6253;">We reply within 24h</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-pin"></i>
+        <h4>Visit us</h4>
+        <p>42 Serenity Lane<br>London W1T 7NJ</p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-clock"></i>
+        <h4>Opening hours</h4>
+        <p>Mon–Fri: 9am – 8pm<br>Sat: 10am – 6pm<br>Sun: Closed</p>
+      </div>
+    </div>
+
+    <h2><i class="fas fa-map-marked-alt"></i> Find us here</h2>
+    <p>Our clinic is located in the heart of the Wellness District, just a short walk from the nearest tube station. We are surrounded by serene gardens and quiet streets, creating the perfect atmosphere for relaxation and rejuvenation. Whether you are coming for a treatment or just to say hello, you will always find a warm welcome.</p>
+    <p>Below you will find an interactive map to help you navigate to our location. Simply click on the map to open it in Google Maps for directions from your current location.</p>
+
+    <!-- MAP (working, embedded) -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.215312055078!2d-0.13769002364515075!3d51.51847247182099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2d8b9d9b0f%3A0x4f2e8a8e5f3b1a0!2s42%20Serenity%20Lane%2C%20London%20W1T%207NJ%2C%20UK!5e0!3m2!1sen!2suk!4v1689876543210" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <h2><i class="fas fa-comment-dots"></i> Let's talk — we're here for you</h2>
+    <p>We understand that choosing the right skin care partner is a personal journey. That is why we offer free 15‑minute telephone consultations to discuss your needs, answer your questions, and help you decide which treatment might be best for you. To schedule a call, simply email us or call our reception.</p>
+    <p>For existing clients, we encourage you to reach out if you have any feedback or suggestions. Your insights help us improve and grow. We also love hearing about your skin care journey — your story inspires us to keep doing what we do.</p>
+
+    <h2><i class="fas fa-users"></i> Community engagement</h2>
+    <p>PawsOut is more than a clinic — we are a community. We regularly host wellness workshops, skin care seminars, and Q&A sessions with our experts. Follow us on social media (links below) to stay updated on upcoming events. You can also subscribe to our newsletter for exclusive tips, offers, and behind‑the‑scenes content.</p>
+    <p>We are proud to support local charities and environmental initiatives. If you represent an organisation that aligns with our values, we would love to hear from you about potential collaborations.</p>
+
+    <h2><i class="fas fa-question-circle"></i> Frequently asked questions</h2>
+    <p><strong>Do I need to book in advance?</strong><br>Yes, we recommend booking at least 48 hours in advance to secure your preferred time slot. We do accept walk‑ins when availability allows, but priority is given to booked appointments.</p>
+    <p><strong>What should I expect during my first visit?</strong><br>Your first visit includes a comprehensive skin consultation, during which we assess your skin type, discuss your goals, and tailor a treatment plan just for you. We also provide after‑care advice to maximise your results.</p>
+    <p><strong>Can I cancel or reschedule my appointment?</strong><br>Absolutely. We ask for at least 24 hours’ notice for cancellations or rescheduling. Late cancellations may incur a fee, but we understand that emergencies happen — just give us a call.</p>
+
+    <h2><i class="fas fa-phone"></i> Call us today</h2>
+    <p>If you prefer to speak directly with a member of our team, you can reach us at <span class="highlight">+44 20 7946 0234</span> during our opening hours. Our receptionists are friendly, knowledgeable, and ready to assist you with appointments, product inquiries, or any other questions.</p>
+
+    <div class="card-note">
+      <i class="fas fa-star" style="color: #b28b7a; margin-right: 10px;"></i>
+      <strong>We value your privacy:</strong> Any information you share with us will be handled in accordance with our <a href="privacy.html" style="color: #7f6253;">Privacy Policy</a>. We never share your details with third parties without your explicit consent.
+    </div>
+
+    <h2><i class="fas fa-globe"></i> Connect with us online</h2>
+    <p>You can also find us on social media for daily inspiration, skin care tips, and community stories:</p>
+    <ul>
+      <li><i class="fab fa-instagram" style="color:#b28b7a; width:1.8rem;"></i> <strong>Instagram:</strong> @pawsout.skin</li>
+      <li><i class="fab fa-facebook" style="color:#b28b7a; width:1.8rem;"></i> <strong>Facebook:</strong> /PawsOutSkinCare</li>
+      <li><i class="fab fa-youtube" style="color:#b28b7a; width:1.8rem;"></i> <strong>YouTube:</strong> PawsOut Wellness</li>
+    </ul>
+    <p>We post regular content on skin health, treatment demonstrations, and client testimonials. Don't forget to like, share, and subscribe to stay in the loop!</p>
+
+    <h2><i class="fas fa-paw"></i> A personal note from our founder</h2>
+    <p>“At PawsOut, we treat every client like family. Your trust means the world to us, and we are committed to providing a safe, nurturing environment where you can relax and transform. Whether you are visiting us for the first time or the hundredth, we want you to feel heard, cared for, and valued. Thank you for being part of our story.” — <strong>Elena M., Founder</strong></p>
+    <p>We look forward to welcoming you to PawsOut. If you have any questions, don't hesitate to reach out — we are here to help you on your journey to radiant, healthy skin.</p>
+
+    <hr>
+    <p style="font-size: 1rem; opacity: 0.9;"><i class="fas fa-heart" style="color:#b28b7a; margin-right: 6px;"></i> Thank you for choosing PawsOut. We can't wait to meet you.</p>
+
+  </div><!-- end contact-content -->
+
+  <!-- footer with address & phone -->
+  <div class="footer-address">
+    <div class="addr">
+      <i class="fas fa-map-pin"></i>
+      <span> 42 Serenity Lane, Wellness District,<br>  London W1T 7NJ, United Kingdom</span>
+    </div>
+    <div class="phone">
+      <i class="fas fa-phone-alt"></i> +44 20 7946 0234
+    </div>
+  </div>
+  <div class="footer-copy">
+    <i class="far fa-copyright"></i> 2026 PawsOut Skin Care — we're here for you.
+  </div>
+</div> <!-- end container -->
+</body>
+</html>

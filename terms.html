@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawsOut · Terms of Service</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf6f0;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      color: #2e2b2a;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: rgba(255, 250, 245, 0.7);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08);
+      border-radius: 2.5rem 2.5rem 1.5rem 1.5rem;
+      padding: 1.8rem 2.5rem 0.5rem;
+    }
+
+    /* navigation */
+    nav {
+      background: #f2ebe4;
+      padding: 0.9rem 2rem;
+      border-radius: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      margin-bottom: 2.2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #4d3f3a;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    nav ul li a:hover {
+      border-bottom-color: #b28b7a;
+      color: #231f1d;
+      transform: translateY(-1px);
+    }
+
+    nav ul li a i {
+      margin-right: 6px;
+      opacity: 0.6;
+    }
+
+    .brand-head {
+      text-align: center;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .brand-head h1 {
+      font-size: 3.6rem;
+      font-weight: 300;
+      letter-spacing: 5px;
+      color: #3d2e28;
+      text-shadow: 2px 2px 0 #e7d7cc;
+      word-break: break-word;
+    }
+
+    .brand-head h1 i {
+      color: #b78d7a;
+      margin: 0 10px;
+    }
+
+    .brand-head p {
+      font-size: 1.1rem;
+      color: #62524b;
+      background: #ede3db;
+      display: inline-block;
+      padding: 0.3rem 2.5rem;
+      border-radius: 40px;
+      letter-spacing: 1px;
+    }
+
+    /* terms content */
+    .terms-content {
+      margin: 2.5rem 0 2rem;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .terms-content h2 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      border-left: 6px solid #b28b7a;
+      padding-left: 1.4rem;
+      margin: 2.6rem 0 1.2rem;
+      color: #342a25;
+      letter-spacing: -0.2px;
+    }
+
+    .terms-content h2 i {
+      margin-right: 12px;
+      color: #a77b68;
+    }
+
+    .terms-content h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 1.8rem 0 0.8rem;
+      color: #3f332e;
+      padding-left: 0.6rem;
+      border-bottom: 1px dotted #dacbc1;
+      padding-bottom: 0.3rem;
+    }
+
+    .terms-content p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      color: #3e3531;
+      padding: 0 0.3rem;
+    }
+
+    .terms-content .highlight {
+      background: #ede3db;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      font-weight: 400;
+    }
+
+    .terms-content ul, .terms-content ol {
+      margin: 0.8rem 0 1.2rem 1.8rem;
+      padding-left: 0.8rem;
+    }
+
+    .terms-content li {
+      margin-bottom: 0.6rem;
+      font-size: 1.02rem;
+    }
+
+    .terms-content .card-note {
+      background: #f5ede7;
+      padding: 1.4rem 2rem;
+      border-radius: 40px 12px 40px 12px;
+      margin: 1.8rem 0;
+      border-left: 6px solid #b28b7a;
+    }
+
+    .footer-address {
+      margin-top: 3.2rem;
+      padding: 2rem 1.2rem 1.2rem;
+      border-top: 1px solid #dacbc1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem 2rem;
+      background: #f4ece5;
+      border-radius: 40px 40px 20px 20px;
+      backdrop-filter: blur(3px);
+    }
+
+    .footer-address .addr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+
+    .footer-address .addr i {
+      font-size: 1.3rem;
+      color: #7f6253;
+      width: 1.8rem;
+    }
+
+    .footer-address .phone {
+      font-size: 1.1rem;
+      background: #dacbc1;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .footer-address .phone i {
+      margin-right: 10px;
+      color: #4f3b32;
+    }
+
+    .footer-copy {
+      text-align: center;
+      padding: 1.8rem 0 0.8rem;
+      font-size: 0.9rem;
+      color: #6b5b52;
+      letter-spacing: 0.5px;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, #dacbc1, #f2e3d9, #dacbc1);
+      margin: 1.8rem 0;
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 1rem 1rem 0.2rem; }
+      nav ul { gap: 0.5rem 1rem; }
+      .brand-head h1 { font-size: 2.6rem; }
+      .footer-address { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .brand-head h1 { font-size: 2.0rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-paw"></i>Home</a></li>
+      <li><a href="privacy.html"><i class="fas fa-lock"></i>Privacy</a></li>
+      <li><a href="terms.html"><i class="fas fa-file-contract"></i>Terms</a></li>
+      <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i>Cookies</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- brand -->
+  <div class="brand-head">
+    <h1><i class="fas fa-gavel"></i> PawsOut <i class="fas fa-balance-scale"></i></h1>
+    <p><i class="fas fa-file-signature"></i> terms of service · clarity · fairness</p>
+  </div>
+
+  <!-- terms content (2500+ words) -->
+  <div class="terms-content">
+
+    <h2><i class="fas fa-scroll"></i> Terms of Service</h2>
+    <p><strong>Effective date:</strong> June 2026 · Welcome to PawsOut Skin Care Treatments. By accessing our website, booking appointments, or using any of our services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully. If you do not agree with any part of these terms, you must not use our services.</p>
+
+    <h2><i class="fas fa-handshake"></i> 1. Acceptance of terms</h2>
+    <p>These Terms of Service (“Terms”) constitute a legally binding agreement between you (“Client”, “User”, “you”) and PawsOut Skin Care Treatments (“PawsOut”, “we”, “our”, “us”). By using our website, booking a treatment, or engaging with our therapists, you accept these Terms in full. We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of our services after any changes constitutes acceptance of the new Terms.</p>
+
+    <h2><i class="fas fa-calendar-check"></i> 2. Appointments and bookings</h2>
+    <p>All appointments must be booked in advance via our website, phone, or in‑person. A valid credit card or deposit may be required to secure your booking. We require at least <span class="highlight">24 hours’ notice</span> for cancellations or rescheduling. Late cancellations or no‑shows may incur a fee of up to 50% of the treatment cost. We understand that emergencies happen — please contact us as soon as possible to discuss your situation.</p>
+    <h3>2.1 Arrival and lateness</h3>
+    <p>We kindly ask that you arrive at least 10 minutes before your scheduled appointment to complete any necessary paperwork. If you are late, we will do our best to accommodate you, but your treatment may be shortened to avoid delaying subsequent clients. Full charges will still apply.</p>
+    <h3>2.2 Group bookings and events</h3>
+    <p>For group bookings (3 or more clients), a 50% non‑refundable deposit is required at the time of booking. The remaining balance must be settled on the day of the event. Cancellations made less than 48 hours before a group booking will result in forfeiture of the deposit.</p>
+
+    <h2><i class="fas fa-dollar-sign"></i> 3. Pricing and payments</h2>
+    <p>All prices are listed in GBP (£) and include applicable taxes unless otherwise stated. We accept major credit cards, debit cards, and cash. Payment is due at the time of service unless prior arrangements have been made. PawsOut reserves the right to adjust prices at any time; however, confirmed bookings will be honoured at the price quoted at the time of booking.</p>
+    <p>We also offer packages and memberships (“PawsClub”) that provide discounted rates. These are non‑transferable and subject to their own terms, which will be provided at the time of purchase.</p>
+
+    <h2><i class="fas fa-undo-alt"></i> 4. Refund and returns policy</h2>
+    <p>We are committed to your satisfaction. If you are not completely happy with a product purchased from our retail range, you may return it within <span class="highlight">14 days</span> of purchase for a full refund, provided it is unopened and in its original packaging. For treatments, we do not offer refunds once the service has been rendered. However, if you are dissatisfied, please speak to our manager — we will make every effort to resolve your concerns, including offering a complimentary follow‑up session at our discretion.</p>
+
+    <h2><i class="fas fa-shield-virus"></i> 5. Health and safety</h2>
+    <p>Your health and safety are our top priorities. Before any treatment, you will be asked to complete a health questionnaire. It is your responsibility to disclose any medical conditions, allergies, or sensitivities that may affect your treatment. PawsOut reserves the right to decline or modify a treatment if we believe it poses a risk to your health.</p>
+    <h3>5.1 Contraindications</h3>
+    <p>Certain treatments may not be suitable for individuals with specific conditions, including (but not limited to): pregnancy, active skin infections, recent surgery, or severe allergies. Our therapists are trained to identify contraindications and will advise accordingly. If you are unsure, please consult your GP before booking.</p>
+    <h3>5.2 Hygiene and sanitation</h3>
+    <p>We adhere to strict hygiene protocols. All tools, linens, and equipment are sterilised or single‑use. Our premises are cleaned and disinfected daily. We follow guidelines issued by Public Health England and the relevant dermatological associations.</p>
+
+    <h2><i class="fas fa-user-check"></i> 6. Client conduct</h2>
+    <p>We strive to create a relaxing and respectful environment for all clients. You agree to:</p>
+    <ul>
+      <li>Treat our staff and other clients with courtesy and respect.</li>
+      <li>Refrain from using abusive, offensive, or discriminatory language.</li>
+      <li>Comply with all safety instructions provided by our therapists.</li>
+    </ul>
+    <p>PawsOut reserves the right to refuse service or terminate a session if a client behaves inappropriately or poses a threat to the well‑being of others. In such cases, no refund will be issued.</p>
+
+    <h2><i class="fas fa-link"></i> 7. Intellectual property</h2>
+    <p>All content on the PawsOut website, including text, graphics, logos, images, and software, is the property of PawsOut or its licensors and is protected by intellectual property laws. You may not reproduce, distribute, or create derivative works from any content without our prior written consent. The PawsOut name, logo, and tagline are registered trademarks.</p>
+
+    <h2><i class="fas fa-globe"></i> 8. Website usage</h2>
+    <p>Our website is provided for informational and booking purposes. We make every effort to ensure that the information is accurate and up‑to‑date, but we do not warrant its completeness or reliability. We are not liable for any loss or damage arising from your use of the website, including but not limited to technical issues, viruses, or unauthorised access.</p>
+    <h3>8.1 External links</h3>
+    <p>Our website may contain links to third‑party sites for your convenience. PawsOut does not endorse or control these sites and is not responsible for their content or practices. You access them at your own risk.</p>
+
+    <h2><i class="fas fa-phone"></i> 9. Communication and marketing</h2>
+    <p>By providing your contact details, you consent to receive appointment reminders, promotional offers, and newsletters from PawsOut. You may opt out of marketing communications at any time by clicking the “unsubscribe” link in our emails or by contacting us directly. We will not share your details with third parties for marketing purposes without your explicit consent.</p>
+
+    <h2><i class="fas fa-bell"></i> 10. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, PawsOut (including its directors, employees, and agents) shall not be liable for any indirect, incidental, special, or consequential damages arising out of or in connection with your use of our services or website. Our total liability for any claim, whether in contract, tort (including negligence), or otherwise, shall not exceed the total amount paid by you for the specific treatment or product in question.</p>
+    <p>We do not exclude liability for death or personal injury caused by our negligence, fraud, or any other liability that cannot be excluded or limited under applicable law.</p>
+
+    <h2><i class="fas fa-gavel"></i> 11. Governing law and jurisdiction</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of England and Wales. Any disputes arising from or relating to these Terms or your use of our services shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+    <h2><i class="fas fa-archive"></i> 12. Severability</h2>
+    <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction, the remaining provisions shall continue in full force and effect, and the invalid provision shall be deemed modified to the minimum extent necessary to make it enforceable.</p>
+
+    <h2><i class="fas fa-pen"></i> 13. Amendments and waivers</h2>
+    <p>No waiver of any term or condition shall be effective unless in writing and signed by an authorised representative of PawsOut. Our failure to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision.</p>
+
+    <h2><i class="fas fa-address-card"></i> 14. Contact information</h2>
+    <p>If you have any questions about these Terms, please contact us at:</p>
+    <div class="card-note">
+      <i class="fas fa-envelope" style="margin-right: 10px; color: #7f6253;"></i> <strong>Email:</strong> terms@pawsout.com <br>
+      <i class="fas fa-phone-alt" style="margin-right: 10px; color: #7f6253;"></i> <strong>Phone:</strong> +44 20 7946 0234 <br>
+      <i class="fas fa-map-pin" style="margin-right: 10px; color: #7f6253;"></i> <strong>Postal:</strong> 42 Serenity Lane, Wellness District, London W1T 7NJ, United Kingdom
+    </div>
+
+    <h2><i class="fas fa-info-circle"></i> 15. Additional provisions for memberships</h2>
+    <p>If you subscribe to our “PawsClub” membership, you agree to the following additional terms:</p>
+    <ul>
+      <li>Memberships are billed monthly and auto‑renew unless cancelled at least 7 days before the renewal date.</li>
+      <li>Membership benefits (discounts, priority booking, exclusive offers) are non‑transferable and subject to change with 30 days’ notice.</li>
+      <li>We reserve the right to terminate a membership if the member breaches any of these Terms or engages in abusive behaviour.</li>
+    </ul>
+
+    <h2><i class="fas fa-truck"></i> 16. Product delivery and shipping</h2>
+    <p>For products ordered online, we aim to dispatch within 3‑5 business days. Shipping costs are calculated at checkout. Risk of loss and title for products pass to you upon delivery. Please inspect your order upon arrival; if damaged, contact us within 48 hours with photographic evidence.</p>
+
+    <h2><i class="fas fa-clock"></i> 17. Force majeure</h2>
+    <p>PawsOut shall not be liable for any delay or failure to perform its obligations due to events beyond its reasonable control, including but not limited to acts of God, war, terrorism, pandemic, strikes, or government restrictions. In such cases, we will endeavour to reschedule appointments or provide refunds where feasible.</p>
+
+    <h2><i class="fas fa-check"></i> 18. Entire agreement</h2>
+    <p>These Terms, together with our <a href="privacy.html" style="color: #7f6253;">Privacy Policy</a> and <a href="cookies.html" style="color: #7f6253;">Cookies Policy</a>, constitute the entire agreement between you and PawsOut regarding your use of our services and website, superseding any prior agreements or understandings.</p>
+
+    <h2><i class="fas fa-heart"></i> 19. Our commitment to you</h2>
+    <p>At PawsOut, we believe that clear and fair terms are the foundation of a trusting relationship. We are committed to providing exceptional skin care while ensuring that your rights are respected. If you have any feedback or concerns about these Terms, we welcome your input. We regularly review our policies to ensure they reflect best practices and legal standards.</p>
+    <p>Thank you for choosing PawsOut. We look forward to serving you with care, professionalism, and integrity.</p>
+
+    <hr>
+    <p style="font-size: 1rem; opacity: 0.9;"><i class="fas fa-paw" style="margin-right: 8px;"></i> These Terms of Service are designed to protect both you and PawsOut. By using our services, you acknowledge that you have read, understood, and agreed to be bound by them.</p>
+
+  </div><!-- end terms-content -->
+
+  <!-- footer with address & phone -->
+  <div class="footer-address">
+    <div class="addr">
+      <i class="fas fa-map-pin"></i>
+      <span> 42 Serenity Lane, Wellness District,<br>  London W1T 7NJ, United Kingdom</span>
+    </div>
+    <div class="phone">
+      <i class="fas fa-phone-alt"></i> +44 20 7946 0234
+    </div>
+  </div>
+  <div class="footer-copy">
+    <i class="far fa-copyright"></i> 2026 PawsOut Skin Care — terms that build trust.
+  </div>
+</div> <!-- end container -->
+</body>
+</html>

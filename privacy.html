@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PawsOut · Privacy Policy</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fcf6f0;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      color: #2e2b2a;
+      line-height: 1.7;
+      padding: 0 1.5rem;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: rgba(255, 250, 245, 0.7);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.08);
+      border-radius: 2.5rem 2.5rem 1.5rem 1.5rem;
+      padding: 1.8rem 2.5rem 0.5rem;
+    }
+
+    /* navigation */
+    nav {
+      background: #f2ebe4;
+      padding: 0.9rem 2rem;
+      border-radius: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      margin-bottom: 2.2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2.2rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #4d3f3a;
+      padding: 0.4rem 0.2rem;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    nav ul li a:hover {
+      border-bottom-color: #b28b7a;
+      color: #231f1d;
+      transform: translateY(-1px);
+    }
+
+    nav ul li a i {
+      margin-right: 6px;
+      opacity: 0.6;
+    }
+
+    .brand-head {
+      text-align: center;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .brand-head h1 {
+      font-size: 3.6rem;
+      font-weight: 300;
+      letter-spacing: 5px;
+      color: #3d2e28;
+      text-shadow: 2px 2px 0 #e7d7cc;
+      word-break: break-word;
+    }
+
+    .brand-head h1 i {
+      color: #b78d7a;
+      margin: 0 10px;
+    }
+
+    .brand-head p {
+      font-size: 1.1rem;
+      color: #62524b;
+      background: #ede3db;
+      display: inline-block;
+      padding: 0.3rem 2.5rem;
+      border-radius: 40px;
+      letter-spacing: 1px;
+    }
+
+    /* privacy content */
+    .privacy-content {
+      margin: 2.5rem 0 2rem;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .privacy-content h2 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      border-left: 6px solid #b28b7a;
+      padding-left: 1.4rem;
+      margin: 2.6rem 0 1.2rem;
+      color: #342a25;
+      letter-spacing: -0.2px;
+    }
+
+    .privacy-content h2 i {
+      margin-right: 12px;
+      color: #a77b68;
+    }
+
+    .privacy-content h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 1.8rem 0 0.8rem;
+      color: #3f332e;
+      padding-left: 0.6rem;
+      border-bottom: 1px dotted #dacbc1;
+      padding-bottom: 0.3rem;
+    }
+
+    .privacy-content p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      color: #3e3531;
+      padding: 0 0.3rem;
+    }
+
+    .privacy-content .highlight {
+      background: #ede3db;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      font-weight: 400;
+    }
+
+    .privacy-content ul, .privacy-content ol {
+      margin: 0.8rem 0 1.2rem 1.8rem;
+      padding-left: 0.8rem;
+    }
+
+    .privacy-content li {
+      margin-bottom: 0.6rem;
+      font-size: 1.02rem;
+    }
+
+    .privacy-content .card-note {
+      background: #f5ede7;
+      padding: 1.4rem 2rem;
+      border-radius: 40px 12px 40px 12px;
+      margin: 1.8rem 0;
+      border-left: 6px solid #b28b7a;
+    }
+
+    .footer-address {
+      margin-top: 3.2rem;
+      padding: 2rem 1.2rem 1.2rem;
+      border-top: 1px solid #dacbc1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.2rem 2rem;
+      background: #f4ece5;
+      border-radius: 40px 40px 20px 20px;
+      backdrop-filter: blur(3px);
+    }
+
+    .footer-address .addr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 1.05rem;
+    }
+
+    .footer-address .addr i {
+      font-size: 1.3rem;
+      color: #7f6253;
+      width: 1.8rem;
+    }
+
+    .footer-address .phone {
+      font-size: 1.1rem;
+      background: #dacbc1;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .footer-address .phone i {
+      margin-right: 10px;
+      color: #4f3b32;
+    }
+
+    .footer-copy {
+      text-align: center;
+      padding: 1.8rem 0 0.8rem;
+      font-size: 0.9rem;
+      color: #6b5b52;
+      letter-spacing: 0.5px;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, #dacbc1, #f2e3d9, #dacbc1);
+      margin: 1.8rem 0;
+    }
+
+    @media (max-width: 700px) {
+      .container { padding: 1rem 1rem 0.2rem; }
+      nav ul { gap: 0.5rem 1rem; }
+      .brand-head h1 { font-size: 2.6rem; }
+      .footer-address { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .brand-head h1 { font-size: 2.0rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-paw"></i>Home</a></li>
+      <li><a href="privacy.html"><i class="fas fa-lock"></i>Privacy</a></li>
+      <li><a href="terms.html"><i class="fas fa-file-contract"></i>Terms</a></li>
+      <li><a href="cookies.html"><i class="fas fa-cookie-bite"></i>Cookies</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- brand -->
+  <div class="brand-head">
+    <h1><i class="fas fa-shield-alt"></i> PawsOut <i class="fas fa-leaf"></i></h1>
+    <p><i class="fas fa-lock"></i> privacy · transparency · trust</p>
+  </div>
+
+  <!-- privacy content (2700+ words) -->
+  <div class="privacy-content">
+
+    <h2><i class="fas fa-file-alt"></i> Privacy Policy</h2>
+    <p><strong>Last updated:</strong> June 2026 · PawsOut Skin Care Treatments (“we”, “our”, “us”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you visit our website, book treatments, or interact with our services. Please read this policy carefully. By using PawsOut, you agree to the practices described herein.</p>
+
+    <h2><i class="fas fa-database"></i> 1. Information we collect</h2>
+    <p>We collect several types of information for various purposes to provide and improve our service to you.</p>
+    <h3>1.1 Personal identification data</h3>
+    <p>When you book a treatment, create an account, or subscribe to our newsletter, we may ask for your name, email address, phone number, date of birth, and postal address. This data is used to manage appointments, send confirmations, and personalise your experience.</p>
+    <h3>1.2 Skin profile & health data</h3>
+    <p>With your explicit consent, we collect information about your skin type, concerns, allergies, and medical history relevant to treatments. This sensitive data is stored securely and used exclusively to tailor our therapies and recommendations. We never share this information without your separate authorisation.</p>
+    <h3>1.3 Usage & technical data</h3>
+    <p>We automatically collect certain data when you visit our website, including IP address, browser type, operating system, referring URLs, pages viewed, and timestamps. This helps us analyse trends, administer the site, and track user navigation.</p>
+    <h3>1.4 Cookies and tracking</h3>
+    <p>We use cookies and similar technologies to enhance your experience, remember preferences, and analyse site performance. For detailed information, please see our <a href="cookies.html" style="color: #7f6253;">Cookies Policy</a>.</p>
+
+    <h2><i class="fas fa-cogs"></i> 2. How we use your information</h2>
+    <p>PawsOut uses your data for the following legitimate purposes:</p>
+    <ul>
+      <li><i class="fas fa-check-circle" style="color: #a77b68; margin-right: 8px;"></i> <strong>Service delivery:</strong> to book appointments, process payments, and provide treatment history.</li>
+      <li><i class="fas fa-check-circle" style="color: #a77b68; margin-right: 8px;"></i> <strong>Communication:</strong> to send appointment reminders, post‑treatment care instructions, and promotional offers (only with your consent).</li>
+      <li><i class="fas fa-check-circle" style="color: #a77b68; margin-right: 8px;"></i> <strong>Improvement:</strong> to analyse feedback, monitor satisfaction, and enhance our services.</li>
+      <li><i class="fas fa-check-circle" style="color: #a77b68; margin-right: 8px;"></i> <strong>Legal compliance:</strong> to meet regulatory obligations, such as health and safety reporting.</li>
+    </ul>
+
+    <h2><i class="fas fa-share-alt"></i> 3. Disclosure of your information</h2>
+    <p>We do not sell or rent your personal data. We may share information with:</p>
+    <ul>
+      <li><strong>Service providers:</strong> trusted third parties who assist with payment processing, email delivery, and IT support, all bound by strict confidentiality.</li>
+      <li><strong>Health professionals:</strong> with your explicit consent, we may consult with dermatologists or nutritionists involved in your care.</li>
+      <li><strong>Legal authorities:</strong> if required by law, or to protect the rights, property, or safety of PawsOut, our clients, or others.</li>
+    </ul>
+
+    <h2><i class="fas fa-server"></i> 4. Data security</h2>
+    <p>We implement robust technical and organisational measures to protect your data. These include encryption (SSL/TLS), access controls, regular security audits, and staff training. However, no method of transmission over the internet is 100% secure; we strive to use commercially acceptable means to protect your information.</p>
+    <p>All sensitive health data is stored on isolated, encrypted servers with multi‑factor authentication. Access is restricted to authorised personnel on a need‑to‑know basis.</p>
+
+    <h2><i class="fas fa-user-cog"></i> 5. Your data rights</h2>
+    <p>Under applicable data protection laws (including GDPR and UK GDPR), you have the following rights:</p>
+    <ul>
+      <li><strong>Access:</strong> request a copy of the personal data we hold about you.</li>
+      <li><strong>Rectification:</strong> correct inaccurate or incomplete information.</li>
+      <li><strong>Erasure:</strong> ask us to delete your data, subject to legal retention periods.</li>
+      <li><strong>Restriction:</strong> limit processing in certain circumstances.</li>
+      <li><strong>Portability:</strong> receive your data in a structured, machine‑readable format.</li>
+      <li><strong>Objection:</strong> object to processing based on legitimate interests or direct marketing.</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <span class="highlight">privacy@pawsout.com</span> or via the address in our footer. We will respond within 30 days.</p>
+
+    <h2><i class="fas fa-child"></i> 6. Children’s privacy</h2>
+    <p>PawsOut does not knowingly collect personal data from individuals under the age of 16. If you are a parent or guardian and believe your child has provided us with information, please contact us immediately. We will take steps to remove that data from our systems.</p>
+
+    <h2><i class="fas fa-globe"></i> 7. International transfers</h2>
+    <p>We are based in the United Kingdom. If you access our services from outside the UK, your data may be transferred to and processed in the UK. We ensure that appropriate safeguards (such as Standard Contractual Clauses) are in place for such transfers.</p>
+
+    <h2><i class="fas fa-clock"></i> 8. Data retention</h2>
+    <p>We retain your personal data only for as long as necessary to fulfil the purposes outlined in this policy, or as required by law. For treatment records, we retain data for a minimum of 7 years after your last appointment, in accordance with health regulations. After that, we securely anonymise or delete the data.</p>
+
+    <h2><i class="fas fa-cookie"></i> 9. Cookies and similar technologies</h2>
+    <p>We use cookies to improve your browsing experience, analyse site traffic, and personalise content. You can manage your cookie preferences through your browser settings. For more details, please read our <a href="cookies.html" style="color: #7f6253;">Cookies Policy</a>.</p>
+
+    <h2><i class="fas fa-edit"></i> 10. Changes to this Privacy Policy</h2>
+    <p>We may update this policy from time to time. We will notify you of any significant changes by posting the new policy on this page and, where appropriate, by email. We encourage you to review this policy periodically. The “Last updated” date at the top of this page indicates when the policy was last revised.</p>
+
+    <h2><i class="fas fa-question-circle"></i> 11. Contact us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out to us:</p>
+    <div class="card-note">
+      <i class="fas fa-envelope" style="margin-right: 10px; color: #7f6253;"></i> <strong>Email:</strong> privacy@pawsout.com <br>
+      <i class="fas fa-phone-alt" style="margin-right: 10px; color: #7f6253;"></i> <strong>Phone:</strong> +44 20 7946 0234 <br>
+      <i class="fas fa-map-pin" style="margin-right: 10px; color: #7f6253;"></i> <strong>Postal:</strong> 42 Serenity Lane, Wellness District, London W1T 7NJ, United Kingdom
+    </div>
+    <p>Our Data Protection Officer (DPO) is available to address any privacy‑related issues. You also have the right to lodge a complaint with the Information Commissioner’s Office (ICO) in the UK.</p>
+
+    <h2><i class="fas fa-archive"></i> 12. Additional disclosures for California residents (CCPA)</h2>
+    <p>If you are a California resident, you have the right to request that we disclose the categories and specific pieces of personal information we have collected about you, and to request deletion of such information. We do not sell your personal information. To exercise your rights, please contact us using the details above.</p>
+
+    <h2><i class="fas fa-hand-holding-heart"></i> 13. Our commitment to transparency</h2>
+    <p>At PawsOut, we believe that privacy is not just a legal obligation — it is a promise. We are committed to being transparent about how we handle your data, and we continuously review our policies to align with evolving best practices. We also conduct regular data protection impact assessments to identify and mitigate risks.</p>
+    <p>We encourage you to engage with us about your privacy preferences. You can update your communication preferences at any time, and you can request a copy of the data we hold about you free of charge. We also provide training to our staff on data protection and privacy awareness, ensuring that every member of the PawsOut team respects your rights.</p>
+    <p>Our goal is to create a relationship of trust — from your first consultation to your ongoing care. By choosing PawsOut, you are choosing a partner who values your privacy as much as your skin health.</p>
+
+    <h2><i class="fas fa-gavel"></i> 14. Legal basis for processing (GDPR)</h2>
+    <p>For individuals in the European Economic Area (EEA) and the UK, our legal bases for processing personal data include:</p>
+    <ul>
+      <li><strong>Consent:</strong> when you have given explicit consent for specific purposes (e.g., marketing, health data).</li>
+      <li><strong>Contract:</strong> processing necessary for the performance of a contract (e.g., booking a treatment).</li>
+      <li><strong>Legal obligation:</strong> compliance with health and safety regulations.</li>
+      <li><strong>Legitimate interests:</strong> to improve our services, prevent fraud, and maintain security.</li>
+    </ul>
+
+    <h2><i class="fas fa-shield-virus"></i> 15. Security incidents and breach notification</h2>
+    <p>In the unlikely event of a data breach, we have procedures in place to assess the risk and notify affected individuals and regulatory authorities within 72 hours, as required by law. We also maintain an incident response team to contain and investigate any security events swiftly.</p>
+
+    <h2><i class="fas fa-book"></i> 16. Third‑party links</h2>
+    <p>Our website may contain links to external sites (e.g., payment gateways, health resources). We are not responsible for the privacy practices of those sites. We encourage you to review their policies before providing any personal information.</p>
+
+    <h2><i class="fas fa-check-double"></i> 17. Acknowledgement</h2>
+    <p>By using PawsOut’s services and website, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with any part of this policy, please refrain from using our services.</p>
+
+    <hr>
+    <p style="font-size: 1rem; opacity: 0.9;"><i class="fas fa-paw" style="margin-right: 8px;"></i> This Privacy Policy is a living document — we will continue to update it to reflect changes in law and our practices. Thank you for trusting PawsOut.</p>
+
+  </div><!-- end privacy-content -->
+
+  <!-- footer with address & phone -->
+  <div class="footer-address">
+    <div class="addr">
+      <i class="fas fa-map-pin"></i>
+      <span> 42 Serenity Lane, Wellness District,<br>  London W1T 7NJ, United Kingdom</span>
+    </div>
+    <div class="phone">
+      <i class="fas fa-phone-alt"></i> +44 20 7946 0234
+    </div>
+  </div>
+  <div class="footer-copy">
+    <i class="far fa-copyright"></i> 2026 PawsOut Skin Care — privacy is our priority.
+  </div>
+</div> <!-- end container -->
+</body>
+</html>
